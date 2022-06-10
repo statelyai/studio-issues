@@ -1,0 +1,19 @@
+name: Create labeled issues to Linear
+
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  create-linear-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Create issue in Linear if it has the 🟣  Linear label'
+        if: contains(github.event.label.name, '🟣  Linear' )
+        uses: seripap/gh-linear-action@v1.0.3
+        with:
+          linear-key: ${{ secrets.LINEAR_API_TOKEN }}
+          linear-team-id: ${{ secrets.LINEAR_TEAM_ID }}
+          title: ${{ github.event.issue.title }}
+          body: ${{ github.event.issue.body }}
+          url: ${{ github.event.issue.html_url }}
