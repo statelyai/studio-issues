@@ -1,19 +1,18 @@
-name: Move triaged to Linear
+name: Create new issues to Linear
 
 on:
   issues:
-    types: [labeled]
+    types: [opened]
 
 jobs:
   create-linear-issue:
     runs-on: ubuntu-latest
     steps:
-      - name: 'Check if labeled triaged'
-        if: contains(github.event.label.name, 'triage' )
+      - name: 'Create issue in Linear'
         uses: seripap/gh-linear-action@v1.0.3
         with:
           linear-key: ${{ secrets.LINEAR_API_TOKEN }}
           linear-team-id: ${{ secrets.LINEAR_TEAM_ID }}
           title: ${{ github.event.issue.title }}
           body: ${{ github.event.issue.body }}
-          url: ${{ github.event.issue.url }}
+          url: ${{ github.event.issue.html_url }}
