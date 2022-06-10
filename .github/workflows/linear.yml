@@ -16,4 +16,4 @@ jobs:
           linear-team-id: ${{ secrets.LINEAR_TEAM_ID }}
           title: ${{ github.event.issue.title }}
           body: ${{ github.event.issue.body }}
-          url: ${{ github.event.issue.issue_url }}
+          url: ${{ github.event.issue.url }}
