@@ -1,5 +1,13 @@
-# Stately Feedback Repo
+# Stately Studio Issue Tracker
 
-Use this repository to give feedback on any of our services, for instance the [Stately Editor & Registry](https://stately.ai/registry) currently in Beta.
+Use this repository to report bugs & issues found in the [Stately Editor](https://stately.ai/editor) and [Stately Registry](https://stately.ai/registry).
 
-Feel free to report bugfixes, feature requests, or general feedback as issues.
+## Feature requests
+
+Please post feature requests to [statelyai.canny.io](https://statelyai.canny.io). There, you can:
+
+- 🔎 Search for existing feature requests, 
+- ➕ Add new feature requests
+- 💬 Provide feedback
+- 🗺️ View the public roadmap
+- 🗳️ Vote on proposed features, and more!
