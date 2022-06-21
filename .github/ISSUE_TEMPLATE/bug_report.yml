@@ -1,0 +1,50 @@
+name: Bug Report
+description: File a bug report
+title: "Bug: "
+labels: [bug, triage]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Report an issue with the Stately Studio
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Please provide a clear and concise description of what the bug is.
+      placeholder: Something is broken!
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+      description: What did you expect to happen?
+      placeholder: I expected this to work.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+      description: What was the actual observed result?
+      placeholder: This did not work.
+    validations:
+      required: true
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: Which browsers are you seeing the problem on?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional details
+      description: Add any other details about the problem here. You can also upload screenshots and videos.
+    validations:
+      required: false
