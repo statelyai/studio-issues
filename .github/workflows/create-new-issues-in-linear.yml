@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 'Create issue in Linear'
-        uses: seripap/gh-linear-action@v1.0.3
+        uses: seripap/gh-linear-action@v1.0.4
         with:
           linear-key: ${{ secrets.LINEAR_API_TOKEN }}
           linear-team-id: ${{ secrets.LINEAR_TEAM_ID }}
